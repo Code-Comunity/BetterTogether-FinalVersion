@@ -48,9 +48,10 @@ export default function Produto() {
       console.log(error.response)
     }
     
+   
   }
   console.log(valorFrete)
-
+  localStorage.setItem('@btgther/valorFrete', JSON.stringify(valorFrete))
   useEffect(()=>{
     async function getApi(){
       try{
@@ -88,7 +89,7 @@ export default function Produto() {
     alert("Produto adicionado ao carrinho!!");  
   }
   
-
+  
 
   return (
     <>
@@ -165,8 +166,8 @@ export default function Produto() {
                          <ul
                            style={{listStyle: "none",marginLeft: 5,display: "flex", flexDirection: 'column'  }}>
                             <li style={{ color: "white" }}>Transportadora: {e.titulo}</li>
-                            <li style={{ color: "white" }}>Preço: {e.valor}</li>
-                            <li style={{ color: "white" }}>Prazo: {e.prazo}</li>
+                            <li style={{ color: "white" }}>Preço: R${e.valor}</li>
+                            <li style={{ color: "white" }}>Prazo: {e.prazo} dias</li>
                          </ul>
                        </div>
                      </>

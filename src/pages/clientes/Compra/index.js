@@ -252,7 +252,6 @@ export default function Comprar() {
   //Novos useStates
   const [nomeIdent, setNomeIdent] = useState("");
 
-
   
   return (
     <>
@@ -280,6 +279,8 @@ export default function Comprar() {
               />
             </Form>
 
+
+            
             <Form>
               <input
                 type="text"
@@ -301,8 +302,18 @@ export default function Comprar() {
                 placeholder="CEP *SEM TRAÇO*"
                 onChange={(e) => setCep(e.target.value)}
               />
-              <button onClick={()=> frete()}>frete</button>
             </Form>
+
+
+           
+            <Form>
+                <input style={{ width:"35px", margin:"5px" }} type="checkbox" /><span style={{ color:"grey"}}>Sedex</span>
+                <input style={{ width:"35px", margin:"5px", marginLeft: "10px" }} type="checkbox" /><span style={{ color:"grey"}}>PAC</span>
+            </Form>
+
+
+
+
             <div style={{ display: "flex", width: "100%" }}>
               <Form>
                 <input

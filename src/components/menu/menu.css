@@ -78,7 +78,7 @@
 .BotoesLogin{
   background: #FFFFFF;
   border-radius: 9px;
-  width: 100px;
+  width: 105px;
   padding: 10px;
   margin: 8px;
   color: #820E0E;
@@ -87,6 +87,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+}
+
+.BotoesLogin span{
+  font-size: 15px;
+  margin: 5px;
 }
 
 
