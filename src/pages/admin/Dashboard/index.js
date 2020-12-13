@@ -128,7 +128,7 @@ export default function Dashboard() {
           <div className="direta">
             <div className="perfilDash">
               <div className="circleDash"></div>
-              <h2>{/*usuarioLogado.nome*/}</h2>
+              <h2>{usuarioLogado.nome}</h2>
               <h3> <IoIosExit className="exitbtn" size="23px" color="#820E0E" onClick={()=>Deslogar()} /> </h3>
             </div>
           </div>
@@ -172,6 +172,7 @@ export default function Dashboard() {
                       </div>
                     <div className="total">
                           <IoMdCash size="25px" color="green"/>
+                          
                           <h3>{e.items.map(e=>(e.unit_price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})))}</h3>
                     </div>
                   </div>
@@ -216,16 +217,7 @@ export default function Dashboard() {
                       
                   </div>
 
-                  <div className="cardEst">
-                      <div className="dirCard">
-                        <h4>Público comum</h4>
-                        <h5 style={{marginTop:10, marginBottom: 10 }}>Feminino</h5>
-                        <h5>Masculino</h5>
-                      </div>
-                      <div className="esqCard">
-                        <img src={Graph} alt="grafico"/>
-                      </div>
-                  </div>
+                  
               </div>
         </div>
       </div>

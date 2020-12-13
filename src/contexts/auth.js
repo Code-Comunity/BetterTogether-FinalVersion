@@ -31,15 +31,14 @@ export function AuthProvider({children}){
   async function Autenticar(){
     try{
       const {data} = await api.post('/login', {email:email,senha:senha})
-      console.log(data)
 
+      //alert(data.response.message)
       localStorage.setItem('@btgther/usuario', JSON.stringify(data.usuario))
       localStorage.setItem('@btgther/token', data.token)
       return window.location.href = "/"
     }catch(error){
-      alert(error.message);
-        alert('Os dados digitados estão errados')
-      
+      alert(error.message)
+      alert('Os dados digitados estão errados')
     }
   }
 
@@ -54,7 +53,7 @@ export function AuthProvider({children}){
 
 
     }catch(error){
-      console.log(error)
+      alert(error.response.data.mensagem)
     }
   }
 

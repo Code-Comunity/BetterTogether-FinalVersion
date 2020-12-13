@@ -44,6 +44,10 @@ export default function Perfil(){
             console.log(error)
         }
         }
+
+
+
+
         getApi();
     },[])
 
@@ -59,7 +63,7 @@ export default function Perfil(){
                         </div>
                     </DireitaHeader>
                     <CentroHeader>
-                        <img src={PerfilFoto} alt="perfil" />
+                        <img src={usuario.img} alt="perfil" />
                     </CentroHeader>
                 </Header>
                 <Conteudo>

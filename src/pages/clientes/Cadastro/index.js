@@ -6,8 +6,6 @@ import Logo from '../../../assets/logowhite.svg';
 import './cadastro.css';
 import api from '../../../service/api';
 
-import {Base64} from 'js-base64'
-
 export default function Registro() {
 
 
@@ -32,7 +30,7 @@ export default function Registro() {
       cep:cep,
       img: dataimg
      })
-
+     alert(data)
      alert(`Voce foi cadastrado, seu nome: ${nome}`);
      return window.location.href = "/"
     }
