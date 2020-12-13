@@ -31,7 +31,6 @@ export default function Navbar() {
     return window.location.href = "/"
   }
 
-  console.log(logado,usuario)
   return (
     <>
       <MenuResponsivo />
