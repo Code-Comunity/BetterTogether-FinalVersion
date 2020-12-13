@@ -1,4 +1,5 @@
-import React, { useContext } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext,useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 //Css
@@ -8,6 +9,7 @@ import './menu.css';
 import Perfil from '../../assets/testeperfil.png';
 import Logo from '../../assets/logowhite.svg';
 import {FaInfoCircle, FaShoppingCart} from 'react-icons/fa';
+import FotoSeUndefined from '../../assets/Ellipse 5.svg'
 
 //Modal
 import Modal from '../ModalCarrinho/modalCarrinho';
@@ -21,15 +23,17 @@ import { IoIosLogIn, IoIosLogOut,IoIosPerson, IoMdPersonAdd } from 'react-icons/
 import  MenuResponsivo  from '../menuResponsivo/menu';
 
 export default function Navbar() {
-
+  const [ FotoReserva, setFotoReserva ] = useState()
   const { logado, usuario } = useContext(Context);
   const [isModalVisible, setIsModalVisible] = useState(false);
-  console.log(usuario)
+
 
   function Deslogar(){
     localStorage.clear();
     return window.location.href = "/"
   }
+
+  
 
   return (
     <>
@@ -53,7 +57,7 @@ export default function Navbar() {
                  { logado ? ( <div className="perfil">
               <h4>{usuario.nome}</h4>
               <div className="circle">
-                <img src={usuario.img} alt="Perfil foto"/>
+                <img src={usuario.img ? usuario.img : FotoSeUndefined} alt="Perfil foto"/>
               </div>
 
               <div className="dropdown">

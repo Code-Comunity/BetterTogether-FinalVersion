@@ -32,12 +32,12 @@ export function AuthProvider({children}){
     try{
       const {data} = await api.post('/login', {email:email,senha:senha})
 
-      alert(data)
+      //alert(data.response.message)
       localStorage.setItem('@btgther/usuario', JSON.stringify(data.usuario))
       localStorage.setItem('@btgther/token', data.token)
       return window.location.href = "/"
     }catch(error){
-      alert(error)
+      alert(error.message)
       alert('Os dados digitados estão errados')
     }
   }
