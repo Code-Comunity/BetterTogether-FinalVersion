@@ -7,7 +7,7 @@ import './menu.css';
 //Imagens
 import Perfil from '../../assets/testeperfil.png';
 import Logo from '../../assets/logowhite.svg';
-import {FaInfoCircle, FaShoppingCart} from 'react-icons/fa';
+import {FaHome, FaShoppingCart} from 'react-icons/fa';
 
 //Modal
 import Modal from '../ModalCarrinho/modalCarrinho';
@@ -42,7 +42,15 @@ export default function Navbar() {
         </div>
         <div className="ladoDireito">
                   
-                  <div className="botoes">                      
+                  <div className="botoes">
+
+                      <Link to="/" className="btnNav">
+                        <div className="buttonNav">                        
+                              <h4>Home</h4>
+                              <FaHome />                        
+                        </div>
+                      </Link> 
+
                       <Link onClick={() => setIsModalVisible(true)} className="btnNav" to="#">
                         <div className="buttonNav">               
                               <h4>Carrinho</h4> 
@@ -65,11 +73,11 @@ export default function Navbar() {
             </div> ) : ( 
             
             <div className="loginEcadastro"> 
-              <Link className="BotoesLogin" to="/login"> <IoIosLogIn size="15px" />  Logar</Link>
-              <Link className="BotoesLogin" to="/cadastro"> <IoMdPersonAdd size="25px" /> Cadastrar</Link> 
+              <Link className="BotoesLogin" to="/login"> <span><IoIosLogIn /></span>  Logar</Link>
+              <Link className="BotoesLogin" to="/cadastro"> <span><IoMdPersonAdd /></span> Cadastrar</Link> 
             </div>
 
-             )}           
+            )}           
             
         </div>        
       </div>
