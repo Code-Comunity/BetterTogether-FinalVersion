@@ -12,7 +12,8 @@ Fazer uma loja virtual funcional com meios de vendas e gerenciamento de produtos
 <br>
 
 ### **Justificativa:**
- [Não Lançado]
+ Este projeto tem como finalidade construir um e-commerce para auxiliar nas vendas dos produtos da empresa BetterTogether,
+ ajudando também no tcc da equipe dos autores abaixo.
 
  <br>
 
